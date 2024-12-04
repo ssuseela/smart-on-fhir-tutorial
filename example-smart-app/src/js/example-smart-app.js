@@ -79,6 +79,7 @@
           p.fname = fname;
           p.lname = lname;
           p.height = getQuantityValueAndUnit(height[0]);
+          p.allergy = "<div>" + toAlert.join("</div><div>") + "</div>";
 
           if (typeof systolicbp != 'undefined')  {
             p.systolicbp = systolicbp;
@@ -116,6 +117,7 @@
       ldl: {value: ''},
       hdl: {value: ''},
       tp: {value: ''},
+      allergy: {value: ''},
     };
   }
 
@@ -159,7 +161,8 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-    $('#tp').html(p.tp)
+    $('#tp').html(p.tp);
+    $('#allergy').html(p.allergy);
   };
 
 })(window);
