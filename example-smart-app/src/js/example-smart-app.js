@@ -15,9 +15,13 @@
                     type: 'Observation',
                     query: {
                       code: {
-                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
-                              'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
+                        $or: ['http://loinc.org|8302-2', //height
+                              'http://loinc.org|8462-4', //Diastolic blood pressure
+                              'http://loinc.org|8480-6', //systolic blood pressure
+                              'http://loinc.org|2085-9', //measurement of cholesterol in high-density lipoprotein (HDL) in serum or plasma
+                              'http://loinc.org|2089-1', //Cholesterol in LDL Mass/volume in Serum or Plasma.
+                              'http://loinc.org|55284-4' //blood pressure systolic and diastolic
+                             ]
                       }
                     }
                   });
@@ -25,6 +29,8 @@
         $.when(pt, obv).fail(onError);
 
         $.when(pt, obv).done(function(patient, obv) {
+          concole.log(patient);
+          console.log(obv);
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
