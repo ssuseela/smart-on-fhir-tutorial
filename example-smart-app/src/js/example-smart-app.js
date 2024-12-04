@@ -16,11 +16,13 @@
                     query: {
                       code: {
                         $or: ['http://loinc.org|8302-2', //height
-                              'http://loinc.org|8462-4', //Diastolic blood pressure
-                              'http://loinc.org|8480-6', //systolic blood pressure
+                              //'http://loinc.org|8462-4', //Diastolic blood pressure
+                              //'http://loinc.org|8480-6', //systolic blood pressure
+                              // 'http://loinc.org|85354-9', //Diastolic and systolic blood pressure
                               'http://loinc.org|2085-9', //measurement of cholesterol in high-density lipoprotein (HDL) in serum or plasma
                               'http://loinc.org|2089-1', //Cholesterol in LDL Mass/volume in Serum or Plasma.
-                              'http://loinc.org|55284-4' //blood pressure systolic and diastolic
+                              //'http://loinc.org|55284-4' //blood pressure systolic and diastolic
+                              'http://loinc.org|85354-9' //blood pressure systolic and diastolic
                              ]
                       }
                     }
@@ -43,8 +45,10 @@
           }
 
           var height = byCodes('8302-2');
-          var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
-          var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
+          //var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
+          //var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
+          var systolicbp = getBloodPressureValue(byCodes('85354-9'),'8480-6');
+          var diastolicbp = getBloodPressureValue(byCodes('85354-9'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
