@@ -21,8 +21,8 @@
                               // 'http://loinc.org|85354-9', //Diastolic and systolic blood pressure
                               'http://loinc.org|2085-9', //measurement of cholesterol in high-density lipoprotein (HDL) in serum or plasma
                               'http://loinc.org|2089-1', //Cholesterol in LDL Mass/volume in Serum or Plasma.
-                              //'http://loinc.org|55284-4' //blood pressure systolic and diastolic
-                              'http://loinc.org|85354-9' //blood pressure systolic and diastolic
+                              //'http://loinc.org|55284-4', //blood pressure systolic and diastolic
+                              'http://loinc.org|85354-9', //blood pressure systolic and diastolic
                               'http://loinc.org|8310-5' //temperature
                              ]
                       }
